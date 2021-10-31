@@ -1,0 +1,174 @@
+
+/***********************************
+                HEADER
+***********************************/
+
+.main-header {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 768px) {
+        & {
+            flex-direction: column-reverse;
+        }
+    }
+
+}
+
+#menu {
+    display: none;
+
+    &:checked + .nav-bar {
+        display: block;
+    }
+    
+    &:checked ~ .search-bar .menu-toggle__label {
+        background-color: pink;
+    }
+
+}
+
+
+
+/***********************************
+                NAV BAR
+***********************************/
+.nav-bar {
+    background-color: lightseagreen;
+    text-align: center;
+
+    &__nav-list {
+        display: flex;
+        justify-content: center;
+
+        @media (max-width: 768px) {
+            & {
+                flex-direction: column;
+            }
+        }
+    }
+    
+    &__nav-item {
+        background-color: orange;
+        /* width: 100%; */
+        list-style-type: none;
+    }
+    
+    &__nav-link {
+        display: block; /*Preguntar si funciona con inline-block*/ 
+        background-color: hsla(199, 100%, 49%, 0.986);
+        color: lemonchiffon;
+        padding: 1em 2em;
+        text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+        & {
+            display: none;
+        }
+        
+    }
+
+}
+
+
+
+/***********************************
+                SEARCH BAR
+***********************************/
+
+.search-bar {
+    background-color: hsl(64, 84%, 52%);
+    display: flex;
+    justify-content: space-between;
+
+    &__logo-container,
+    &__form-container {
+        padding: 1em;
+    }
+    
+    &__logo-container { 
+        background-color: goldenrod;
+    }
+    
+    &__form-container {
+        background-color: firebrick;
+        flex-basis: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    &__form-label {
+        background-color: indianred;
+    }
+    
+    &__form-search {
+        background-color: darkorange;
+        width: 70%;
+    }
+    
+    &__form-submit {
+        background-color: darkorchid;
+    }
+    
+    &__carrito-container {
+        flex: 0 0 3em; /*Profundizar*/
+        background-color: chocolate;
+    }
+
+}
+
+
+
+/***********************************
+                MENU TOGGLE
+***********************************/
+
+.menu-toggle {
+    display: none;
+    background-color: blueviolet;
+    flex: 0 0 3em;
+    cursor: pointer;
+    position: relative;
+
+    &__label {
+        display: block;
+        background-color: black;
+        height: 100%;
+    }
+    
+    &__top-bread,
+    &__meat,
+    &__bottom-bread {
+        display: block;
+        background-color: black;
+        height: .2em;
+        position: absolute;
+        left: .5em;
+        right: .5em;
+    }
+    
+    &__top-bread {
+        top: .8em;
+    }
+    
+    &__meat {
+        top: 50%;
+        margin-top: -.1em;
+    }
+    
+    &__bottom-bread {
+        bottom: .8em;
+    }
+
+    @media (max-width: 768px) {
+    
+        & {
+            display: block;
+        }
+    }
+
+
+}
+
+
