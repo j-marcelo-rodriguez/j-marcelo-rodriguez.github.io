@@ -5,9 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito</title>
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+    <header class="main-header">
+        
+        <input type="checkbox" id="menu">
+
+        <nav class="nav-bar">
+            <ul class="nav-bar__nav-list">
+                <li class="nav-bar__nav-item">
+                    <a class="nav-bar__nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-bar__nav-item">
+                    <a class="nav-bar__nav-link" href="alta.html">Alta</a>
+                </li>
+                <li class="nav-bar__nav-item">
+                    <a class="nav-bar__nav-link" href="contacto.html">Contacto</a>
+                </li>
+                <li class="nav-bar__nav-item">
+                    <a class="nav-bar__nav-link" href="nosotros.html">Nosotros</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <div class="search-bar__logo-container">
+                <img class="search-bar__logo" src="img/logo/connecticus.png" alt="logo">
+            </div>
+            <form class="search-bar__form-container">
+                <label class="search-bar__form-label" for="busqueda">Encontrá tus productos</label>
+                <input class="search-bar__form-search" id="busqueda" type="search">
+                <input class="search-bar__form-submit" type="submit" value="Buscar">
+            </form>
+            <div class="search-bar__carrito-container">
+                <img class="search-bar__carrito" src="img/logo/cart.png" alt="">
+            </div>
+            <div class="menu-toggle">
+                <label class="menu-toggle__label" for="menu">
+                    <span class="menu-toggle__top-bread"></span>
+                    <span class="menu-toggle__meat"></span>
+                    <span class="menu-toggle__bottom-bread"></span>
+                </label>
+            </div>
+        </div>
+    </header>
     <h1>Carrito</h1>
 </body>
 </html>

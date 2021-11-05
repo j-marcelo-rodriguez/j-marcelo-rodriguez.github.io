@@ -78,6 +78,11 @@ body {
 .main-header {
   display: flex;
   flex-direction: column;
+  background: #232526;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #414345, #232526);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 @media (max-width: 768px) {
   .main-header {
@@ -99,12 +104,12 @@ body {
                 NAV BAR
 ***********************************/
 .nav-bar {
-  background-color: lightseagreen;
   text-align: center;
+  position: relative;
 }
 .nav-bar__nav-list {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 @media (max-width: 768px) {
   .nav-bar__nav-list {
@@ -112,17 +117,18 @@ body {
   }
 }
 .nav-bar__nav-item {
-  background-color: orange;
-  /* width: 100%; */
   list-style-type: none;
 }
 .nav-bar__nav-link {
   display: block;
   /*Preguntar si funciona con inline-block*/
-  background-color: rgba(0, 171, 250, 0.986);
-  color: lemonchiffon;
+  color: white;
   padding: 1em 2em;
   text-decoration: none;
+}
+.nav-bar__nav-link:hover {
+  transform: scale(1.1);
+  color: #968969;
 }
 @media (max-width: 768px) {
   .nav-bar {
@@ -134,36 +140,45 @@ body {
                 SEARCH BAR
 ***********************************/
 .search-bar {
-  background-color: #deeb1e;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .search-bar__logo-container, .search-bar__form-container {
   padding: 1em;
 }
-.search-bar__logo-container {
-  background-color: goldenrod;
+.search-bar__logo {
+  width: 100%;
+  height: auto;
 }
 .search-bar__form-container {
-  background-color: firebrick;
   flex-basis: 100%;
   display: flex;
   justify-content: center;
 }
 .search-bar__form-label {
-  background-color: indianred;
+  color: white;
+  line-height: 30px;
+  margin-right: 4px;
 }
 .search-bar__form-search {
-  background-color: darkorange;
-  width: 70%;
+  border: none;
+  background-color: lightgrey;
+  width: 50%;
+  height: 30px;
 }
 .search-bar__form-submit {
-  background-color: darkorchid;
+  margin-left: 4px;
+  opacity: 0.3;
+  font-size: 16px;
 }
 .search-bar__carrito-container {
   flex: 0 0 3em;
   /*Profundizar*/
-  background-color: chocolate;
+  margin-right: 1em;
+}
+.search-bar__carrito {
+  width: 100%;
 }
 
 /***********************************
