@@ -49,24 +49,24 @@
             </div>
         </div>
     </header>
-    <fieldset>
-        <legend><h1>Alta</h1></legend>
-        <form method="post" enctype="multipart/form-data">
-            <div>
-                <label for="nombre">Nombre:</label>
-                <input id="nombre" type="text" name="nombre" required minlength="5" maxlength="60" placeholder=" Ej.: Xiamoi Mi Band 5 ">
+    <fieldset class="fieldset-container">
+        <legend class="fieldset-container__title"><h1>Alta</h1></legend>
+        <form class="form-container" method="post" enctype="multipart/form-data">
+            <div class="form-container__name">
+                <label class="form-container__name-label" for="nombre">Nombre:</label>
+                <input class="form-container__name-input" id="nombre" type="text" name="nombre" required minlength="5" maxlength="60" placeholder=" Ej.: Xiamoi Mi Band 5 ">
             </div>
-            <div>
-                <label for="precio">Precio:</label>
-                <input id="precio" type="number" name="precio" required min="0" step=".01">
+            <div class="form-container__price">
+                <label class="form-container__price-label" for="precio">Precio:</label>
+                <input class="form-container__price-input" id="precio" type="number" name="precio" required min="0" step=".01">
             </div>
-            <div>
-                <label for="stock">Stock:</label>
-                <input id="stock" type="number" name="stock" required min="0" max="120" value="1" >
+            <div class="form-container__stock">
+                <label class="form-container__stock-label" for="stock">Stock:</label>
+                <input class="form-container__stock-inout" id="stock" type="number" name="stock" required min="0" max="120" value="1" >
             </div>
-            <div>
-                <label for="marca">Marca:</label>
-                <select name="marca" id="marca">
+            <div class="form-container__brand">
+                <label class="form-container__brand-label" for="marca">Marca:</label>
+                <select class="form-container__brand-selection" name="marca" id="marca">
                     <option value="20">Seleccioná la marca</option>
                     <option value="21">Apple</option>
                     <option value="22">Marshall</option>
@@ -74,9 +74,9 @@
                     <option value="24">Xiaomi</option>
                 </select>
             </div>
-            <div>
-                <label for="categoría">Categoría:</label>
-                <select name="categoría" id="categoría" required>
+            <div class="form-container__category">
+                <label class="form-container__category-label" for="categoría">Categoría:</label>
+                <select class="form-container__category-selection" name="categoría" id="categoría" required>
                     <option value="">Tecnología</option>
                     <optgroup label="Smartphones">
                         <option value="10">Smartphones</option>
@@ -95,8 +95,8 @@
                 </select>
             </div>
         
-            <fieldset>
-                <legend>Garantía:</legend>
+            <fieldset class="form-container__warranty">
+                <legend class="form-container__warranty-title">Garantía:</legend>
                 <input type="radio" name="garantia" id="garantia-1" value="30">
                 <label for="garantia-1">6 meses</label>
                 <input type="radio" name="garantia" id="garantia-2" value="31">
@@ -104,22 +104,20 @@
                 <input type="radio" name="garantia" id="garantia-3" value="32">
                 <label for="garantia-3">24 meses</label>
             </fieldset>
-            <div>
-                <label for="foto">Adjuntá fotos de tu producto</label>
-                <input id="foto" type="file"  accept="image/*" multiple>
+            <div class="form-container__picture">
+                <label class="form-container__picture-label" for="foto">Adjuntá fotos de tu producto:</label>
+                <input class="form-container__picture-input" id="foto" type="file"  accept="image/*" multiple>
             </div>        
-            <div>
-                <label for="detalles">Detallá tu producto:</label>
-                <div>
-                    <textarea name="detalles" id="detalles" minlength="20" maxlength="400"></textarea>
-                </div>
+            <div class="form-container__product">
+                <label class="form-container__product-label" for="detalles">Detallá tu producto:</label>
+                <textarea class="form-container__product-description" name="detalles" id="detalles" minlength="20" maxlength="400"></textarea>
             </div>
-            <div>
-                <input id="envio-sin-cargo" type="checkbox" checked>
-                <label for="envio-sin-cargo">Envio sin cargo</label>
+            <div class="form-container__shipping">
+                <input class="form-container__shipping-input" id="envio-sin-cargo" type="checkbox" checked>
+                <label class="form-container__shipping-label" for="envio-sin-cargo">Envio sin cargo</label>
             </div>
 
-            <input type="submit" value="Crear">    
+            <input class="form-container__submit" type="submit" value="Crear">    
         </form>
     </fieldset>    
     </body>

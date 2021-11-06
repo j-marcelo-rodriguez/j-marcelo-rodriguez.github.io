@@ -9,6 +9,12 @@
 
 body {
   box-sizing: border-box;
+  background: #5D4157;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #A8CABA, #5D4157);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 1em;
 }
 
 body {
@@ -221,11 +227,6 @@ body {
 }
 
 .section-cards {
-  background: #5D4157;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #A8CABA, #5D4157);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   padding: 1em;
 }
 
@@ -235,4 +236,102 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.5em;
+}
+
+.fieldset-container {
+  overflow: hidden;
+}
+
+html:hover .form-container {
+  transform: translateY(0);
+}
+
+.fieldset-container__title {
+  text-align: center;
+}
+
+.form-container {
+  width: 50%;
+  margin: 5% auto;
+  text-align: center;
+  border: 4px solid red;
+  transform: translateY(100%);
+  transform-origin: bottom;
+  transition-duration: 2s;
+}
+
+.form-container__name {
+  margin-top: 1em;
+}
+
+.form-container__price,
+.form-container__stock,
+.form-container__brand {
+  display: inline-block;
+  margin: 1em 0.5em;
+}
+
+.form-container__category {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+.form-container__category-selection {
+  width: 80%;
+}
+
+.form-container__warranty {
+  width: 60%;
+  margin: 0 auto 1em;
+}
+
+.form-container__picture {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.form-container__picture-input {
+  margin-left: 10%;
+}
+
+.form-container__product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.form-container__product-description {
+  resize: none;
+  width: 80%;
+  height: 10em;
+}
+
+.form-container__shipping {
+  margin: 1em;
+}
+
+.form-container__submit {
+  border: 4px solid red;
+  width: 8em;
+  height: 3em;
+  border-radius: 5px;
+  margin-bottom: 1em;
+}
+
+@media (max-width: 440px) {
+  .form-container__name-input,
+.form-container__price-input,
+.form-container__brand-selection,
+.form-container__category-selection {
+    width: 80%;
+  }
+}
+@media (max-width: 540px) {
+  .form-container__picture-input {
+    width: 80%;
+  }
 }/*# sourceMappingURL=main.css.map */
