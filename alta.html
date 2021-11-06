@@ -49,6 +49,78 @@
             </div>
         </div>
     </header>
-    <h1>Alta</h1>
-</body>
+    <fieldset>
+        <legend><h1>Alta</h1></legend>
+        <form method="post" enctype="multipart/form-data">
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input id="nombre" type="text" name="nombre" required minlength="5" maxlength="60" placeholder=" Ej.: Xiamoi Mi Band 5 ">
+            </div>
+            <div>
+                <label for="precio">Precio:</label>
+                <input id="precio" type="number" name="precio" required min="0" step=".01">
+            </div>
+            <div>
+                <label for="stock">Stock:</label>
+                <input id="stock" type="number" name="stock" required min="0" max="120" value="1" >
+            </div>
+            <div>
+                <label for="marca">Marca:</label>
+                <select name="marca" id="marca">
+                    <option value="20">Seleccioná la marca</option>
+                    <option value="21">Apple</option>
+                    <option value="22">Marshall</option>
+                    <option value="23">Sony</option>
+                    <option value="24">Xiaomi</option>
+                </select>
+            </div>
+            <div>
+                <label for="categoría">Categoría:</label>
+                <select name="categoría" id="categoría" required>
+                    <option value="">Tecnología</option>
+                    <optgroup label="Smartphones">
+                        <option value="10">Smartphones</option>
+                        <option value="11">Accesorios para Smartphones</option>
+                    </optgroup>
+                    <optgroup label="Audio">
+                        <option value="12">Parlantes bluetooth</option>
+                    </optgroup>
+                    <optgroup label="Computación">
+                        <option value="14">Notebooks</option>
+                        <option value="13">Tablets</option>
+                    </optgroup>
+                    <optgroup label="Cámaras">
+                        <option value="15">Cámaras</option>
+                    </optgroup>
+                </select>
+            </div>
+        
+            <fieldset>
+                <legend>Garantía:</legend>
+                <input type="radio" name="garantia" id="garantia-1" value="30">
+                <label for="garantia-1">6 meses</label>
+                <input type="radio" name="garantia" id="garantia-2" value="31">
+                <label for="garantia-2">12 meses</label>
+                <input type="radio" name="garantia" id="garantia-3" value="32">
+                <label for="garantia-3">24 meses</label>
+            </fieldset>
+            <div>
+                <label for="foto">Adjuntá fotos de tu producto</label>
+                <input id="foto" type="file"  accept="image/*" multiple>
+            </div>        
+            <div>
+                <label for="detalles">Detallá tu producto:</label>
+                <div>
+                    <textarea name="detalles" id="detalles" minlength="20" maxlength="400"></textarea>
+                </div>
+            </div>
+            <div>
+                <input id="envio-sin-cargo" type="checkbox" checked>
+                <label for="envio-sin-cargo">Envio sin cargo</label>
+            </div>
+
+            <input type="submit" value="Crear">    
+        </form>
+    </fieldset>    
+    </body>
 </html>

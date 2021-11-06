@@ -49,6 +49,21 @@
             </div>
         </div>
     </header>
-    <h1>Contacto</h1>
+    
+    <fieldset>
+        <legend><h1>Contacto</h1></legend>
+        <form method="post" enctype="text/plain">
+            <label for="nombre">Nombre:*</label>
+            <input id="nombre" type="text" name="nombre" required>
+            
+            <label for="e-mail">Direccion de correo electrónico:*</label>
+            <input id="e-mail" type="email" name="e-mail" placeholder="Ej: mail@connecticus.com" required>
+
+            <label for="comentarios">Comentarios:</label>
+            <textarea id="comentarios" name="comentarios" placeholder="Realizá tu consulta" required></textarea>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </fieldset>
 </body>
 </html>
