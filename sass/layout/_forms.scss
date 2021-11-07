@@ -1,9 +1,6 @@
 .fieldset-container {
+    font-family: 'Roboto', sans-serif;
     overflow: hidden;
-}
-
-html:hover .form-container {
-    transform: translateY(0);
 }
 
 .fieldset-container__title {
@@ -12,16 +9,33 @@ html:hover .form-container {
 
 .form-container {
     width: 50%;
-    margin: 5% auto;
+    margin: 3% auto;
     text-align: center;
-    border: 4px solid red;
+    border: 1px solid #736974;
+    border-radius: 7px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     transform: translateY(100%);
     transform-origin: bottom;
     transition-duration: 2s;
+    background-image: url(/img/logo/connecticus.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 150px;
+}
+
+html:hover .form-container {
+    transform: translateY(0);
 }
 
 .form-container__name {
-    margin-top: 1em;
+    margin-top: 1.5em;
+}
+
+.form-container__name-input {
+    border-radius: 4px;
+    width: 50%;
+    height:2.5em;
+    background-color: #b3dbc5;
 }
 
 .form-container__price, 
@@ -31,6 +45,16 @@ html:hover .form-container {
     margin: 1em .5em;
     // border: 4px solid red;
 }
+
+.form-container__price-input,
+.form-container__stock-input,
+.form-container__brand-selection,
+.form-container__category-selection {
+    background-color: #b3dbc5;
+    border-radius: 4px;
+    height:2.5em;
+}
+
 
 .form-container__category {
     display: flex;
@@ -46,7 +70,9 @@ html:hover .form-container {
 .form-container__warranty {
     // border: 4px solid red;
     width: 60%;
+    height: 3em;
     margin: 0 auto 1em;
+
 }
 
 .form-container__picture {
@@ -74,6 +100,8 @@ html:hover .form-container {
     resize: none;
     width: 80%;
     height: 10em;
+    border-radius: 5px;
+    background-color: #b3dbc5;
 }
 
 .form-container__shipping {
@@ -82,12 +110,25 @@ html:hover .form-container {
 }
 
 .form-container__submit {
-    border: 4px solid red;
+    // border: 4px solid red;
     width: 8em;
     height: 3em;
     border-radius: 5px;
     margin-bottom: 1em;
+    background-color: #96A9A2;
+    cursor: pointer;
+    transition-duration: .6s;
 }
+
+.form-container__submit:hover {
+    background: #00467F;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #A5CC82, #00467F);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #A5CC82, #00467F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    transform: scale(1.1);
+    transition-duration: .6s;
+}
+
+
 
 @media (max-width: 440px) {
     .form-container__name-input,
