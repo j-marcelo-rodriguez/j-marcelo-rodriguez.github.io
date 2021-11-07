@@ -380,4 +380,39 @@ html:hover .form-container {
   .form-container__name-input, .form-container__price-input, .form-container__brand-selection, .form-container__category-selection {
     width: 80%;
   }
+}
+
+.footer {
+  border: 4px solid red;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__title {
+  font-family: "Roboto", sans-serif;
+  font-weight: bolder;
+  height: 32px;
+  align-self: flex-end;
+  border: 4px solid red;
+}
+
+.footer a {
+  display: inline-block;
+  margin: 0 0.2em;
+}
+
+.footer__icon-container {
+  border: 4px solid red;
+}
+
+@media (max-width: 614px) {
+  .footer {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+@media (max-width: 614px) {
+  .footer__title {
+    align-self: center;
+  }
 }/*# sourceMappingURL=main.css.map */
