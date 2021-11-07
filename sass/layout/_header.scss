@@ -124,11 +124,12 @@
     }
     
     &__form-submit {
+        background-color: #058C9A;
+        color: white;
         margin-left: 4px;
         font-size: 16px;
         height: 2em;
-        background-color: #058C9A;
-        color: white;
+        border-radius: .4em;
         cursor: pointer;
         transition-duration: .8s;
     }
