@@ -372,6 +372,11 @@ html:hover .form-container {
     width: 80%;
   }
 }
+@media (max-width: 500px) {
+  .form-container {
+    width: 100%;
+  }
+}
 @media (max-width: 550px) {
   .form-container {
     background-image: none;
