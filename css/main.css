@@ -57,6 +57,50 @@ body {
      object-fit: cover;
   position: relative;
 }
+.card__image-description {
+  text-align: center;
+  color: lightgrey;
+  opacity: 0.9;
+  position: absolute;
+  z-index: 3;
+  bottom: 1.4em;
+  left: 2em;
+  right: 2em;
+}
+.card__description-product {
+  color: lightgray;
+  font-family: "Oxygen", sans-serif;
+  font-size: 14px;
+  text-align: justify;
+  padding: 0 0.6em 0;
+}
+.card__description-review {
+  margin-top: 1.5em;
+  position: absolute;
+  bottom: 45px;
+  left: 85px;
+}
+.card__description-review::after {
+  content: "review";
+  color: #A7A7A7;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  position: absolute;
+  bottom: 48px;
+  left: 1px;
+  display: none;
+}
+.card__description-review:hover::after {
+  display: block;
+}
+.card__description-price {
+  font-weight: 600;
+  text-align: center;
+  position: absolute;
+  bottom: -1.4em;
+  left: -2.2em;
+  right: -2.2em;
+}
 .card__image-container::after {
   content: " ";
   border: 1em solid lightgrey;
@@ -73,26 +117,6 @@ body {
   z-index: 1;
   transform: rotateY(180deg);
 }
-.card__image-container, .card__content, .card__image {
-  width: 100%;
-  height: 100%;
-  border-radius: 8px;
-}
-.card:hover .card__article {
-  transform: rotateY(180deg);
-}
-
-.card__image-description {
-  text-align: center;
-  color: lightgrey;
-  opacity: 0.9;
-  position: absolute;
-  z-index: 3;
-  bottom: 1.4em;
-  left: 2em;
-  right: 2em;
-}
-
 .card__content {
   background: #536976;
   /* fallback for old browsers */
@@ -100,15 +124,6 @@ body {
   background: linear-gradient(to bottom, #292E49, #536976);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-
-.card__description-product {
-  color: lightgray;
-  font-family: "Oxygen", sans-serif;
-  font-size: 14px;
-  text-align: justify;
-  padding: 0 0.6em 0;
-}
-
 .card__content::after {
   content: " ";
   border: 1em solid lightgrey;
@@ -119,41 +134,17 @@ body {
   right: 2.3em;
   opacity: 0.2;
 }
-
-.card__description-review {
-  margin-top: 1.5em;
-  position: absolute;
-  bottom: 45px;
-  left: 85px;
-}
-
-.card__description-review::after {
-  content: "review";
-  color: #A7A7A7;
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
-  position: absolute;
-  bottom: 48px;
-  left: 1px;
-  display: none;
-}
-
-.card__description-review:hover::after {
-  display: block;
-}
-
 .card__heading {
   text-align: center;
   margin: 0.4em 0 0.6em;
 }
-
-.card__description-price {
-  font-weight: 600;
-  text-align: center;
-  position: absolute;
-  bottom: -1.4em;
-  left: -2.2em;
-  right: -2.2em;
+.card__image-container, .card__content, .card__image {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+.card:hover .card__article {
+  transform: rotateY(180deg);
 }
 
 /***********************************
@@ -320,6 +311,10 @@ body {
 
 .section-cards {
   padding: 1em;
+}
+.section-cards__title, .section-cards__description {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
 }
 
 .cards-container {
