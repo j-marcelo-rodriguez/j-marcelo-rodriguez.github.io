@@ -650,11 +650,28 @@ html:hover .form-container {
   border: none;
   margin-bottom: 8em;
 }
-
 .contact__title {
   font-size: 4em;
   align-self: center;
   text-align: center;
+}
+.contact__image {
+  margin-top: 1em;
+  transform: rotateY(180deg);
+  width: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+  border-radius: 50%;
+}
+@media (max-width: 760px) {
+  .contact__image {
+    width: 200px;
+  }
+}
+@media (max-width: 610px) {
+  .contact__image {
+    display: none;
+  }
 }
 
 .form-contact {
@@ -666,24 +683,57 @@ html:hover .form-container {
   width: 30em;
   gap: 2.5em;
 }
-
 .form-contact__comment {
   display: flex;
   flex-direction: column;
 }
-
-.contact__image {
-  margin-top: 1em;
-  transform: rotateY(180deg);
-  width: 100%;
-  -o-object-fit: fill;
-     object-fit: fill;
-  border-radius: 50%;
+.form-contact__name-input {
+  width: 16em;
+  height: 2.5em;
+  border-radius: 7px;
 }
-
-.location-container__iframe {
-  width: 100%;
-  border-radius: 10px;
+.form-contact__mail-input {
+  width: 16em;
+  height: 2.5em;
+  border-radius: 7px;
+}
+.form-contact__comment-textarea {
+  resize: none;
+  border-radius: 7px;
+  width: 16em;
+  height: 6em;
+}
+.form-contact__submit {
+  width: 16em;
+  height: 4em;
+  border-radius: 7px;
+  position: relative;
+  top: 3em;
+  cursor: pointer;
+}
+@media (max-width: 1400px) {
+  .form-contact {
+    left: 8em;
+  }
+}
+@media (max-width: 760px) {
+  .form-contact {
+    left: 3em;
+  }
+}
+@media (max-width: 610px) {
+  .form-contact {
+    grid-template-columns: 100%;
+    width: auto;
+  }
+  .form-contact__mail {
+    display: flex;
+    flex-direction: column;
+  }
+  .form-contact__name {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .social-container {
@@ -693,7 +743,6 @@ html:hover .form-container {
   position: relative;
   margin-bottom: 5em;
 }
-
 .social-container > a {
   color: lightgrey;
   font-weight: 500;
@@ -705,51 +754,62 @@ html:hover .form-container {
   border-radius: 10px;
   transition-duration: 0.6s;
 }
-
 .social-container > a:hover {
   transform: scale(0.9);
   transition-duration: 0.6s;
 }
-
-.social-container-contact {
+.social-container__contact {
   position: relative;
   top: 1.5em;
 }
-
-.form-contact__name-input {
-  width: 16em;
-  height: 2.5em;
-  border-radius: 7px;
+.social-container__call-us {
+  background: #536976;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #292E49, #536976);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.social-container__whatsapp {
+  background: #348F50;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #56B4D3, #348F50);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.social-container__facebook {
+  background: #4b6cb7;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #182848, #4b6cb7);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.social-container__instagram {
+  background: #7b4397;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #dc2430, #7b4397);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.social-container__mail {
+  background: #e53935;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #e35d5b, #e53935);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.form-contact__mail-input {
-  width: 16em;
-  height: 2.5em;
-  border-radius: 7px;
+.location-container {
+  margin-top: 0.2em;
 }
-
-.form-contact__comment-textarea {
-  resize: none;
-  border-radius: 7px;
-  width: 16em;
-  height: 6em;
-}
-
-.form-contact__submit {
-  width: 16em;
-  height: 4em;
-  border-radius: 7px;
-  position: relative;
-  top: 3em;
-  cursor: pointer;
-}
-
 .location-container__description {
   color: white;
   font-weight: 500;
   margin: 0.9em 0 0.9em;
 }
-
+.location-container__iframe {
+  width: 100%;
+  border-radius: 10px;
+}
 .location-container__invitation {
   background: #1D976C;
   /* fallback for old browsers */
@@ -765,86 +825,11 @@ html:hover .form-container {
   cursor: pointer;
   transition-duration: 0.6s;
 }
-
 .location-container__invitation:hover {
   transform: scale(0.9);
   transition-duration: 0.6s;
 }
 
-.social-container__call-us {
-  background: #536976;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #292E49, #536976);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-.social-container__whatsapp {
-  background: #348F50;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #56B4D3, #348F50);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-.social-container__facebook {
-  background: #4b6cb7;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #182848, #4b6cb7);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-.social-container__instagram {
-  background: #7b4397;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #dc2430, #7b4397);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-.social-container__mail {
-  background: #e53935;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #e35d5b, #e53935);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-@media (max-width: 1400px) {
-  .form-contact {
-    left: 8em;
-  }
-}
-@media (max-width: 760px) {
-  .form-contact {
-    left: 3em;
-  }
-
-  .contact__image {
-    width: 200px;
-  }
-}
-@media (max-width: 610px) {
-  .form-contact {
-    grid-template-columns: 100%;
-    width: auto;
-  }
-
-  .form-contact__mail {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .form-contact__name {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .contact__image {
-    display: none;
-  }
-}
 .footer {
   margin-top: 1.5em;
   display: flex;
