@@ -344,7 +344,7 @@ body {
   transform: translateY(100%);
   transform-origin: bottom;
   transition-duration: 2s;
-  background-image: url(img/logo/connecticus.png);
+  background-image: url(/img/logo/connecticus.png);
   background-repeat: no-repeat;
   background-position: bottom right;
   background-size: 150px;
