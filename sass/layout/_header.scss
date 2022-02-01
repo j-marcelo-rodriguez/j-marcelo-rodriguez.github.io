@@ -147,6 +147,11 @@
     &__carrito-container {
         flex: 0 0 3em; /*Profundizar*/
         margin-right: 1em;
+        cursor: pointer;
+    }
+
+    &__carrito:hover {
+        transform: scale(1.3);
     }
 
     &__carrito {

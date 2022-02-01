@@ -79,6 +79,12 @@
         top: 3em;
         cursor: pointer;
     }
+
+    &__error-validity {
+        width: 16em;
+        height: 2.5em;
+        border-radius: 7px;
+    }
     
     @media (max-width: 1400px) {
         & {
