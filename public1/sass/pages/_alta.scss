@@ -1,0 +1,285 @@
+.fieldset-container {
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+
+    &__title {
+        text-align: center;
+    }
+
+    &__list-title,
+    &__found-products {
+        
+        text-align: center;
+    }
+    
+    table,
+    th,
+    td {
+        background: rgb(119, 151, 129);
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        // border: 1px solid black;
+        border: 1px solid #736974;
+        border-collapse: separate;
+        border-radius: 2px;
+    }
+    
+    table {
+        margin: 1em auto;
+        width: 90%;
+    }
+    
+    th,
+    td {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        padding: 5px;
+    }
+
+    .btn-actualizar,
+    .btn-borrar {
+        display: block;
+        margin: .5em auto;
+        width: 6em;
+        height: 2em;
+        border-radius: .2em;
+        cursor: pointer;
+        background-color: #96A9A2;
+        transition-duration: .6s;
+    }
+
+    .btn-actualizar:hover,
+    .btn-borrar:hover {
+
+        transform: scale(1.1);
+        transition-duration: .6s;
+    }
+
+}
+
+
+
+.form-container {
+    background-color: rgb(119, 151, 129);
+    width: 50%;
+    margin: 3% auto;
+    text-align: center;
+    border: 1px solid #736974;
+    border-radius: 7px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    // transform: translateY(100%);
+    transform-origin: bottom;
+    transition-duration: 2s;
+    background-image: url("../img/logo/connecticus.png");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 150px;
+
+    /* html:hover & {
+        transform: translateY(0);
+    } */
+    
+    &__error-validity {
+        font-size: 13px;
+        font-weight: bold;
+        border-radius: 2px;
+        width: 40%;
+        background: #1D976C;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to bottom, #93F9B9, #1D976C);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to bottom, #93F9B9, #1D976C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+        display: none;
+        margin: 0 auto;
+        
+    }
+    &__name {
+        margin-top: 1.5em;
+    }
+    
+    &__name-input {
+        border-radius: 4px;
+        width: 50%;
+        height:2.5em;
+        background-color: #b3dbc5;
+    }
+    
+    &__price, 
+    &__stock,
+    &__brand {
+        display: inline-block;
+        margin: 1em .5em;
+    }
+    
+    &__price-input,
+    &__stock-input,
+    &__brand-selection,
+    &__category-selection,
+    &__warranty-input,
+    &__picture-input {
+        background-color: #b3dbc5;
+        border-radius: 4px;
+        height:2.5em;
+    }
+    
+    
+    &__category {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1em;
+    }
+    
+    &__category-selection {
+        width: 80%;
+    }
+    
+    &__warranty {
+        
+        width: 60%;
+        height: 3em;
+        margin: 0 auto 1em;
+
+        @media (max-width: 596px) {
+
+            & {
+                width: 80%;
+            }
+        }
+
+        @media (max-width: 450px) {
+
+            & {
+                height: auto;
+            }
+        }    
+
+    
+    }
+
+    &__warranty-input {
+        width: 50%;
+    }
+    
+
+    &__button {
+        display: inline-block;
+        padding: 10px;
+        background: #b3dbc5;
+        cursor: pointer;
+        border-radius: 5px;
+        border: 1px solid #b3dbc5;
+    }
+
+    &__pic {
+        display: none;
+    }
+
+    &__gallery img {
+        width: 80px;
+        margin: 0 auto;
+
+    }
+    
+    &__picture-input {
+        width: 80%;
+        margin:0 auto;
+
+        @media (max-width: 540px) {
+
+            & {
+                width: 80%;
+            }
+        
+        }
+
+    }
+    
+    &__product {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1em;
+    }
+    
+    &__product-description {
+        resize: none;
+        width: 80%;
+        height: 10em;
+        border-radius: 5px;
+        background-color: #b3dbc5;
+    }
+    
+    &__shipping {
+        margin: 1em;
+    }
+    
+    &__submit {
+        width: 8em;
+        height: 3em;
+        border-radius: 5px;
+        margin-bottom: 1em;
+        background-color: #96A9A2;
+        cursor: pointer;
+        transition-duration: .6s;
+    }
+    
+    &__submit:hover {
+        background: #00467F;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #A5CC82, #00467F);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #A5CC82, #00467F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        transform: scale(1.1);
+        transition-duration: .6s;
+    }
+
+    @media (max-width: 920px) {
+
+        & {
+            width: 80%;
+        }
+    }  
+
+    @media (max-width: 500px) {
+
+        & {
+            width: 100%;
+        }
+    } 
+    
+
+    @media (max-width: 550px ) {
+        
+        & {
+            background-image: none;
+        }
+    }
+
+    @media (max-width: 440px) {
+        &__name-input,
+        &__price-input,
+        &__brand-selection,
+        &__category-selection {
+
+            width: 80%;
+        }
+    }
+    
+
+}
+#form-container__picture {
+    margin: 0 auto;
+    border : 2px dashed #b3dbc5;
+    border-radius: 20px;
+    width: 500px;
+    padding: 20px;
+}
+
+#form-container__picture.highlight {
+    border-color: rgb(161, 129, 24);
+}
+
+
+
+
+
+
+
+
+
+

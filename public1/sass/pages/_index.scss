@@ -1,0 +1,21 @@
+.section-cards {
+    // background: #5D4157;  /* fallback for old browsers */
+    // background: -webkit-linear-gradient(to bottom, #A8CABA, #5D4157);  /* Chrome 10-25, Safari 5.1-6 */
+    // background: linear-gradient(to bottom, #A8CABA, #5D4157); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 1em;
+
+    &__title,
+    &__description {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+}
+
+.cards-container {
+    margin-top: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5em;
+}

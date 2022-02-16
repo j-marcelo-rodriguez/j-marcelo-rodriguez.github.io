@@ -1,0 +1,94 @@
+<fieldset class="fieldset-container">
+    <legend class="fieldset-container__title">
+        <h1>Alta</h1>
+    </legend>
+    <form class="form-container" method="post" enctype="multipart/form-data" autocomplete="off">
+        <div class="form-container__name">
+            <label class="form-container__name-label" for="nombre">Nombre:</label>
+            <input class="form-container__name-input" id="nombre" type="text" name="nombre"
+                placeholder=" Ej.: Xiamoi Mi Band 5 ">
+            <div class="form-container__error-validity"></div>
+        </div>
+        <div class="form-container__price">
+            <label class="form-container__price-label" for="precio">Precio:</label>
+            <input class="form-container__price-input" id="precio" type="text" name="precio">
+            <div class="form-container__error-validity"></div>
+        </div>
+        <div class="form-container__stock">
+            <label class="form-container__stock-label" for="stock">Stock:</label>
+            <input class="form-container__stock-input" id="stock" type="number" name="stock">
+            <div class="form-container__error-validity"></div>
+        </div>
+        <div class="form-container__brand">
+            <label class="form-container__brand-label" for="marca">Marca:</label>
+            <input class="form-container__brand-selection" name="marca" id="marca">
+            <div class="form-container__error-validity"></div>
+        </div>
+        <div class="form-container__category">
+            <label class="form-container__category-label" for="categoría">Categoría:</label>
+            <select class="form-container__category-selection" name="categoría" id="categoría">
+                <option value="">Tecnología</option>
+                <optgroup label="Smartphones">
+                    <option value="Smartphones">Smartphones</option>
+                    <option value="Accesorios para Smartphones">Accesorios para Smartphones</option>
+                </optgroup>
+                <optgroup label="Audio">
+                    <option value="Parlantes bluetooth">Parlantes bluetooth</option>
+                </optgroup>
+                <optgroup label="Computación">
+                    <option value="Notebooks">Notebooks</option>
+                    <option value="Tablets">Tablets</option>
+                </optgroup>
+                <optgroup label="Cámaras">
+                    <option value="Cámaras">Cámaras</option>
+                </optgroup>
+            </select>
+            <div class="form-container__error-validity"></div>
+        </div>
+
+        <div class="form-container__warranty">
+            <label for="garantia">Garantía en Meses</label>
+            <input class="form-container__warranty-input" type="text" name="garantia" id="garantia">
+            <div class="form-container__error-validity"></div>
+        </div>
+
+<!--         <div class="form-container__picture">
+            <label class="form-container__picture-label" for="foto">Adjuntá fotos de tu producto:</label>
+            <input class="form-container__picture-input" id="foto" type="text">
+            <div class="form-container__error-validity"></div>
+        </div> -->
+
+
+        <div id="form-container__picture">
+            <p>Adjuntá o arrastra la foto de tu producto:</p>
+            <br>
+            <input class="form-container__pic" type="file" id="foto" accept="imagen/*" onchange="handleFiles(this.files)">
+            <label class="form-container__button" for="foto" >Cargar foto</label>
+            <br><br>
+
+            <progress id="progress-bar" max="100" value="0"></progress>
+            <div class="form-container__gallery"><img src="" alt=""></div>
+        </div>
+
+        <div class="form-container__product">
+            <label class="form-container__product-label" for="detalles">Detallá tu producto:</label>
+            <textarea class="form-container__product-description" name="detalles" id="detalles"></textarea>
+            <div class="form-container__error-validity"></div>
+        </div>
+        <div class="form-container__shipping">
+            <input class="form-container__shipping-input" id="envio-sin-cargo" type="checkbox" checked>
+            <label class="form-container__shipping-label" for="envio-sin-cargo">Envio sin cargo</label>
+        </div>
+
+        <button class="form-container__submit" type="submit" value="Crear">Crear</button>
+    </form>
+
+
+    <br>
+
+    <h2 class="fieldset-container__list-title">Lista de productos disponibles</h2>
+    
+    <div class="fieldset-container__listado-productos"></div>
+    
+</fieldset>
+
