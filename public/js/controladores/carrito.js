@@ -40,18 +40,20 @@ class CarritoController {
 
         let elemSectionCarrito = document.querySelector('.section-carrito')
         elemSectionCarrito.innerHTML = '<h2>Enviando carrito....</h2>'
-        await carritoService.guardarCarrito(carritoModel.obtener())
+        let preference = await carritoService.guardarCarrito(carritoModel.obtener())
         console.log('ok!')
         elemSectionCarrito.innerHTML = '<h2>Enviando carrito....<b>Ok!</b></h2>'
 
         carritoModel.inicializar([])
         localStorage.setItem('carrito', carritoModel.obtener())
 
-        setTimeout( () => {
+        setTimeout( async () => {
             elemSectionCarrito.classList.remove('section-carrito--visible')
             mostrarCarrito = false
 
-        }, 1500)
+            await renderPago(preference)
+
+        }, 0)
     }
 
 }
